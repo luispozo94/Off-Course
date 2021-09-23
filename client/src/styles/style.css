@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+}
+
+.header__test {
+    background-color: rgb(185, 118, 29);
+    height: 100vh;
+    padding: 2rem;
+}
+
+.header__image {
+    background-position: center;
+    background-size: cover;
+    margin: 2rem 0;
+    width: 75%;
+}
