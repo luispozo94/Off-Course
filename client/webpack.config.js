@@ -39,8 +39,8 @@ module.exports = {
 				},
 			},
 			{
-				test: /\.(scss|css)$/,//handles sass
-				use: ['style-loader', 'css-loader', 'sass-loader'],
+				test: /\.(scss|css)$/, //handles sass
+				use: ['style-loader', 'css-loader', 'sass-loader', 'postcss-loader'],
 			},
 			{
 				test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -48,7 +48,7 @@ module.exports = {
 			},
 			{
 				test: /\.(woff|woff2|eot|ttf|otf)$/i,
-				loader: 'url-loader',//for bootstrap
+				loader: 'url-loader', //for bootstrap
 				type: 'asset/resource',
 			},
 		],
