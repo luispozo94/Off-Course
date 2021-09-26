@@ -1,0 +1,58 @@
+.header {
+	display: flex;
+	background-color: whitesmoke;
+	height: 50px;
+	align-items: center;
+	justify-content: center;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+.link {
+	text-decoration: none;
+	display: inline-block;
+	position: relative;
+	color: #212121;
+}
+.link:after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	transform: scaleX(0);
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: #212121;
+	transform-origin: bottom right;
+	transition: transform 0.4s ease-out;
+}
+.link:hover:after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
+}
+
+.header__left {
+	display: flex;
+	font-family: 'Hind Vadodara', sans-serif;
+}
+
+.header__left > a {
+	margin-right: 20px;
+}
+
+.header__right {
+	display: flex;
+}
+
+.header__right > a {
+	margin-left: 20px;
+	font-family: 'Hind Vadodara', sans-serif;
+}
+
+.header__center {
+	display: flex;
+	flex-grow: 1;
+	justify-content: center;
+	font-family: 'Raleway', sans-serif;
+	font-size: 28px;
+}

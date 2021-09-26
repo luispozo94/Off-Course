@@ -27,9 +27,9 @@ export default function Home() {
 
   return (
     <div className="fullpage">
-      <div className="title">
-        <h1>React Boilerplate</h1>
-        <p>A webpack bundled project featuring Babel & React</p>
+      <div className="intro">
+        <h1>HAVE A FIELD DAY</h1>
+        <p>SHOP NOW</p>
       </div>
       <div className="image_container">
         <img
