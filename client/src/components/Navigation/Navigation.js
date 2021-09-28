@@ -17,12 +17,20 @@ const Navigation = () => {
 				</Link>
 			</div>
 			<div className="header__center">
-			<Link to="/home">OFF~COURSE</Link>
+				<Link className="animate-pulse flex space-x-4" to="/Home">
+					OFF~COURSE
+				</Link>
 			</div>
 			<div className="header__right">
-				<Link className="link" to="/SignIn">Sign In</Link>
-				<Link className="link" to="/Cart">Cart</Link>
-				<Link  className="link" to="/Search">Search</Link>
+				<Link className="link" to="/SignIn">
+					Sign In
+				</Link>
+				<Link className="link" to="/Cart">
+					Cart
+				</Link>
+				<Link className="link" to="/Search">
+					Search
+				</Link>
 			</div>
 		</div>
 	);

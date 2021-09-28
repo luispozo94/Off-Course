@@ -1,18 +1,19 @@
 .header {
 	display: flex;
-	background-color: whitesmoke;
+	background-color: white;
 	height: 50px;
 	align-items: center;
 	justify-content: center;
 	padding-left: 40px;
 	padding-right: 40px;
+	margin: 0 auto;
 }
 
 .link {
 	text-decoration: none;
 	display: inline-block;
 	position: relative;
-	color: #212121;
+	color: #303030;
 }
 .link:after {
 	content: '';
@@ -22,7 +23,7 @@
 	height: 2px;
 	bottom: 0;
 	left: 0;
-	background-color: #212121;
+	background-color: #303030;
 	transform-origin: bottom right;
 	transition: transform 0.4s ease-out;
 }
