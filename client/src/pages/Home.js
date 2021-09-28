@@ -28,8 +28,12 @@ export default function Home() {
   return (
     <div className="fullpage">
       <div className="intro">
-        <h1>HAVE A FIELD DAY</h1>
-        <p>SHOP NOW</p>
+        <div className="float">
+          <h1>HAVE A FIELD DAY.</h1>
+        </div>
+        <div className="float_left">
+          <p>SHOP NOW</p>
+        </div>
       </div>
       <div className="image_container">
         <img

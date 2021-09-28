@@ -3,27 +3,92 @@
 @tailwind utilities;
 
 * {
-  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .fullpage {
+  /* FIX POSITION */
   position: fixed;
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
-  display: grid;
+  /* display: grid; */
   grid-template-rows: 40% 60%;
   background-color: white;
 }
 
 .intro {
   height: 40vh;
-  border: 2px solid red;
+  /* position: fixed; */
+  /* margin-top: 10%; */
+  /* border: 2px solid red; */
+  /* max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 20px;
+  padding-left: 20px; */
+}
+
+.float {
+  /* display: flex; */
+  border: 2px solid pink;
+  padding: 3em;
+  width: 40%;
+  margin-left: 10%;
+  /* margin-right: 10%; */
+  /* margin-top: 10%; causing image container to shrink  */
+  /* margin-bottom: -5%; */
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.float h1 {
+  font-size: 36px;
+  text-decoration: underline;
+  font-family: 'Rubik', sans-serif;
+}
+
+.float_left {
+  /* display: flex; */
+  border: 2px solid green;
+  padding: 3em;
+  width: 30%;
+  float: right;
+  /* margin-left: 65%; */
+  margin-right: 10%;
+  /* margin-bottom: -5%; this is not effecting shop now */
+  /* margin-top: 10%; */
+  padding-left: 10px;
+  padding-right: 10px;
+  animation: 1s ease-out 0s 1 slideInLeft;
 }
 
 .image_container {
   height: 60vh;
-  /* background-position: bottom; */
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .image_slider {
@@ -32,5 +97,5 @@
   height: 55%;
   object-fit: cover;
   object-position: bottom;
-  border: 2px solid blue;
+  /* border: 2px solid green; */
 }
