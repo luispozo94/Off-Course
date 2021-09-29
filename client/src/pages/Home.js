@@ -29,7 +29,7 @@ export default function Home() {
     <div className="fullpage">
       <div className="intro">
         <div className="float">
-          <h1>HAVE A FIELD DAY.</h1>
+          <h2>HAVE A FIELD DAY.</h2>
         </div>
         <div className="float_left">
           <p>SHOP NOW</p>

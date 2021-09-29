@@ -1,9 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
 body {
@@ -27,13 +24,16 @@ body {
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
-  /* display: grid; */
+  display: grid;
   grid-template-rows: 40% 60%;
   background-color: white;
 }
 
 .intro {
   height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   /* position: fixed; */
   /* margin-top: 10%; */
   /* border: 2px solid red; */
@@ -45,30 +45,31 @@ body {
 }
 
 .float {
-  /* display: flex; */
+  display: flex;
   border: 2px solid pink;
-  padding: 3em;
+  /* padding: 3em; */
   width: 40%;
   margin-left: 10%;
   /* margin-right: 10%; */
-  /* margin-top: 10%; causing image container to shrink  */
+  /* margin-top: 10%; causing both image containers to lower
   /* margin-bottom: -5%; */
   padding-left: 10px;
   padding-right: 10px;
 }
 
-.float h1 {
-  font-size: 36px;
+.float h2 {
+  font-size: 35px;
   text-decoration: underline;
   font-family: 'Rubik', sans-serif;
+  font-weight: normal;
 }
 
 .float_left {
-  /* display: flex; */
+  display: flex;
   border: 2px solid green;
-  padding: 3em;
   width: 30%;
   float: right;
+  align-self: flex-end;
   /* margin-left: 65%; */
   margin-right: 10%;
   /* margin-bottom: -5%; this is not effecting shop now */
@@ -76,10 +77,6 @@ body {
   padding-left: 10px;
   padding-right: 10px;
   animation: 1s ease-out 0s 1 slideInLeft;
-}
-
-.image_container {
-  height: 60vh;
 }
 
 @keyframes slideInLeft {
@@ -91,11 +88,21 @@ body {
   }
 }
 
+.float_left p {
+  font-family: 'Rubik', sans-serif;
+  font-size: 30px;
+}
+
+.image_container {
+  height: 60vh;
+  width: 100%;
+}
+
 .image_slider {
   position: fixed;
+  object-position: bottom;
   width: 100%;
   height: 55%;
   object-fit: cover;
-  object-position: bottom;
   /* border: 2px solid green; */
 }
