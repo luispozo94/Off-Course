@@ -46,7 +46,7 @@ body {
 
 .float {
   display: flex;
-  border: 2px solid pink;
+  /* border: 2px solid pink; */
   /* padding: 3em; */
   width: 40%;
   margin-left: 10%;
@@ -66,7 +66,7 @@ body {
 
 .float_left {
   display: flex;
-  border: 2px solid green;
+  /* border: 2px solid green; */
   width: 30%;
   float: right;
   align-self: flex-end;

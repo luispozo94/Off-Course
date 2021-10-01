@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import '../../styles/RegisterForm.css';
 
 // import useFetch from '../../Hooks/useFetch.js';
 
@@ -6,6 +7,7 @@ export default function RegisterForm() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [hidden, isHidden] = useState(false);
 
   function handleEmailInput(e) {
     setEmail(e.target.value);
@@ -29,11 +31,11 @@ export default function RegisterForm() {
         password: password,
       }),
     })
-      .then((response) => response.json())
-      .then((data) => {
+      .then(response => response.json())
+      .then(data => {
         console.log(data);
       })
-      .catch((error) => console.log(error))
+      .catch(error => console.log(error))
       .finally(() => {
         setIsLoading(false);
       });
@@ -41,37 +43,95 @@ export default function RegisterForm() {
     setPassword('');
   }
 
+  const toggleLogIn = () =>
+    isHidden(true) ? IsHidden(false) : IsHidden(!false);
+
   return (
     <>
       {isLoading && <p>Loading...</p>}
       {!isLoading && (
-        <form onFormSubmit={handleFormSubmit}>
-          <div>
-            <label htmlFor="input-email">Email:</label>
-            <input
-              id="input-email"
-              type="text"
-              placeholder="Email"
-              name="email"
-              value={email}
-              onChange={handleEmailInput}
-            ></input>
-          </div>
-          <div>
-            <label htmlFor="input-password">Password: </label>
-            <input
-              id="input-password"
-              type="text"
-              placeholder="Password"
-              name="password"
-              value={password}
-              onChange={handlePasswordInput}
-            ></input>
-          </div>
-          <div>
-            <input type="Submit" value="Register" disabled={isLoading} />
-          </div>
-        </form>
+        <div className="form_container">
+          <form
+            className={hidden ? 'hidden' : null}
+            onFormSubmit={handleFormSubmit}
+          >
+            <h2>My Account</h2>
+            <div className="email_field">
+              <input
+                id="input-email"
+                type="text"
+                required
+                placeholder="Email"
+                name="email"
+                value={email}
+                onChange={handleEmailInput}
+              ></input>
+              <span></span>
+              <label htmlFor="input-email"></label>
+            </div>
+            <div className="password_field">
+              <label htmlFor="input-password"></label>
+              <input
+                id="input-password"
+                type="password"
+                required
+                placeholder="Password"
+                name="password"
+                value={password}
+                onChange={handlePasswordInput}
+              ></input>
+              <span></span>
+            </div>
+            <div className="login_button">
+              <input type="Submit" value="Log In" disabled={isLoading} />
+            </div>
+            <div className="register_link">
+              Not a member? <a onClick={toggleLogIn}>Sign Up</a>
+            </div>
+          </form>
+          <form
+            className={!hidden ? 'hidden' : null}
+            onFormSubmit={handleFormSubmit}
+          >
+            <h2>Create Account</h2>
+            <div className="email_field">
+              <input
+                id="input-email"
+                type="text"
+                required
+                placeholder="Email"
+                name="email"
+                value={email}
+                onChange={handleEmailInput}
+              ></input>
+              <span></span>
+              <label htmlFor="input-email"></label>
+            </div>
+            <div className="password_field">
+              <label htmlFor="input-password"></label>
+              <input
+                id="input-password"
+                type="password"
+                required
+                placeholder="Password"
+                name="password"
+                value={password}
+                onChange={handlePasswordInput}
+              ></input>
+              <span></span>
+            </div>
+            <div className="login_button">
+              <input
+                type="Submit"
+                value="Complete Sign Up"
+                disabled={isLoading}
+              />
+            </div>
+            <div className="register_link">
+              Already have an account? <a onClick={toggleLogIn}>Sign In</a>
+            </div>
+          </form>
+        </div>
       )}
     </>
   );
