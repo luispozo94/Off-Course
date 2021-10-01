@@ -6,7 +6,7 @@ import ProductPage from './pages/ProductPage';
 import About from './pages/About';
 import Cart from './pages/Cart';
 import SignIn from './pages/SignIn';
-import ProductItem from './pages/ProductDetail';
+import ProductDetail from './pages/ProductDetail';
 
 const App = (props) => {
 	//create a function that will make fetch request to an api end point
@@ -32,7 +32,7 @@ const App = (props) => {
 				<Route path="/about" exact component={About} />
 				<Route path="/signin" exact component={SignIn} />
 				<Route path="/cart" exact component={Cart} />
-				<Route path="/cart" exact component={ProductItem} />
+			
 			</Switch>
 		</Router>
 	);

@@ -1,20 +1,12 @@
 import React from 'react';
- import { useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import ProductDetail from './ProductDetail';
-import Products from './Products'
-
+import Products from './Products';
 
 //created a functional component that will iterate thru the response JSON
 const ProductPage = (props) => {
 	const [product, setProduct] = useState([
-		{
-			Title: 'The Matrix',
-			Year: '1999',
-			imdbID: 'tt0133093',
-			Type: 'movie',
-			Poster: 'https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg',
-		},
 		{
 			Title: 'Avatar',
 			Year: '2009',
@@ -44,13 +36,6 @@ const ProductPage = (props) => {
 			Type: 'movie',
 			Poster: 'https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg',
 		},
-		{
-			Title: 'The Matrix',
-			Year: '1999',
-			imdbID: 'tt0133093',
-			Type: 'movie',
-			Poster: 'https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg',
-		},
 	]);
 	const getProduct = () => {
 		setProduct(product);
@@ -60,11 +45,10 @@ const ProductPage = (props) => {
 		getProduct();
 	}, []);
 
-	
 	return (
 		<Router>
 			<Switch>
-				<Route exact path="/product/id" render={() => <ProductDetail product={product} />} />
+				<Route exact path="/product/:id" render={() => <ProductDetail product={product} />} />;
 				<Route exact path="/product" render={() => <Products product={product} />} />
 			</Switch>
 		</Router>
@@ -72,3 +56,4 @@ const ProductPage = (props) => {
 };
 
 export default ProductPage;
+// <Route exact path="/product/:id" render={() => <ProductDetail product={product} />} />;
