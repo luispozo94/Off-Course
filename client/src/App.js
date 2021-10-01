@@ -1,22 +1,23 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { createBrowserHistory } from 'history';
 import Home from './pages/Home';
 import Navigation from './components/Navigation/Navigation';
 import ProductPage from './pages/ProductPage';
 import About from './pages/About';
 import Cart from './pages/Cart';
-import SignIn from './pages/SignIn';
-import ProductDetail from './pages/ProductDetail';
-
+import RegisterForm from './components/RegisterForm/RegisterForm';
+import Admin from './pages/Admin';
+const history = createBrowserHistory();
 const App = (props) => {
 	//create a function that will make fetch request to an api end point
-	const getProduct = () => {
-		//	const item = product;
-		//const response = await fetch(item);
-		//const responseJson = await response.json();
-		//	console.log();
-		// setProduct(product);
-	};
+	// const getProduct = () => {
+	//   //	const item = product;
+	//   //const response = await fetch(item);
+	//   //const responseJson = await response.json();
+	//   //	console.log();
+	//   // setProduct(product);
+	// };
 
 	//declare a useEffect to re-render the page everytime theres a search request
 	// useEffect(() => {
@@ -24,15 +25,15 @@ const App = (props) => {
 	// }, []);
 
 	return (
-		<Router>
+		<Router history={history}>
 			<Navigation />
 			<Switch>
 				<Route exact path="/" component={Home} />
 				<Route exact path="/product" component={ProductPage} />
 				<Route path="/about" exact component={About} />
-				<Route path="/signin" exact component={SignIn} />
+				<Route path="/signin" exact component={RegisterForm} />
 				<Route path="/cart" exact component={Cart} />
-			
+				<Route path="/admin" exact component={Admin} />
 			</Switch>
 		</Router>
 	);
