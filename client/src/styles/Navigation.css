@@ -2,12 +2,14 @@
   display: flex;
   background-color: white;
   height: 55px;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-around;
   flex-wrap: nowrap;
   gap: 100px;
   padding-left: 5%;
   padding-right: 5%;
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
   margin: 0 auto;
 }
 
@@ -20,6 +22,30 @@
   /* position: relative; */
   color: #303030;
 }
+
+.logo {
+  color: #303030;
+  text-decoration: none;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    transition-timing-function: ease;
+  }
+
+  70% {
+    transform: scale(1);
+    transition-timing-function: ease;
+  }
+
+  100% {
+    transform: scale(0.95);
+    transition-timing-function: ease;
+  }
+}
+
 .link:after {
   content: '';
   position: absolute;

@@ -3,6 +3,7 @@ import '../styles/style.css';
 import sliderImg from '../assets/images/homepage.jpeg';
 import sliderImg2 from '../assets/images/homepage2.jpeg';
 import sliderImg3 from '../assets/images/homepage3.jpeg';
+import { Link } from 'react-router-dom';
 
 const images = [sliderImg, sliderImg2, sliderImg3];
 
@@ -16,7 +17,7 @@ export default function Home() {
   const handleClick = () => {
     const length = images.length - 1;
 
-    setCurrentImage((currentImage) => {
+    setCurrentImage(currentImage => {
       if (currentImage < length) {
         return currentImage + 1;
       } else {
@@ -32,7 +33,9 @@ export default function Home() {
           <h2>HAVE A FIELD DAY.</h2>
         </div>
         <div className="float_left">
-          <p>SHOP NOW</p>
+          <Link className="shopnow" to="/product">
+            SHOP NOW
+          </Link>
         </div>
       </div>
       <div className="image_container">

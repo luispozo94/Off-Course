@@ -5,7 +5,6 @@ import Navigation from './components/Navigation/Navigation';
 import ProductPage from './pages/ProductPage';
 import About from './pages/About';
 import Cart from './pages/Cart';
-import ProductItem from './pages/ProductDetail';
 import RegisterForm from './components/RegisterForm/RegisterForm';
 
 const App = props => {
@@ -32,7 +31,6 @@ const App = props => {
         <Route path="/about" exact component={About} />
         <Route path="/signin" exact component={RegisterForm} />
         <Route path="/cart" exact component={Cart} />
-        <Route path="/cart" exact component={ProductItem} />
       </Switch>
     </Router>
   );

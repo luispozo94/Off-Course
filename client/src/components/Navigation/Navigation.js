@@ -17,7 +17,7 @@ const Navigation = () => {
         </Link>
       </div>
       <div className="header__center">
-        <Link className="animate-pulse flex space-x-4" to="/Home">
+        <Link className="logo" to="/">
           OFF~COURSE
         </Link>
       </div>
