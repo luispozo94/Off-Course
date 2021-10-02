@@ -9,11 +9,11 @@ const Products = props => {
         props.product.map(item => (
           <Link to={`/product/${item.imdbID}`} key={item.imdbID}>
             <div className="box">
-              <img src={item.Poster} alt="product"></img>
+              <img src={item.image}></img>
             </div>
-            <div className="product_details">
-              <p>Item Brand</p>
-              <p>Product name</p>
+            <div className="product">
+              <p>Brand Name</p>
+              <p>Product Name</p>
               <p>Price</p>
             </div>
           </Link>
@@ -23,3 +23,4 @@ const Products = props => {
 };
 
 export default Products;
+/*<img src={item.Poster} alt="product"></img> */

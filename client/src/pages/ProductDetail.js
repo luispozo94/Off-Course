@@ -12,7 +12,7 @@ const ProductDetail = props => {
           return (
             <div className="product_container">
               <div className="product_photo">
-                <img src={item.Poster} key={item.imdbID}></img>
+                <img src={item.image} key={item.imdbID}></img>
               </div>
               <div className="product_info">
                 <p className="brand">Item Brand</p>
