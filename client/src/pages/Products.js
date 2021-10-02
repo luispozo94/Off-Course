@@ -7,7 +7,7 @@ const Products = (props) => {
 		<div className="container ">
 			{props.product &&
 				props.product.map((item) => (
-					<Link to={`/product/${item.imdbID}`} key={item.imdbID}>
+					<Link to={`/product/${item.id}`} key={item.id}>
 						<div className="box">
 							<img src={item.image}></img>
 						</div>

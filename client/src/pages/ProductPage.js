@@ -12,8 +12,13 @@ import image4 from '../assets/NewImages/image8.png';
 const ProductPage = (props) => {
 	const images = [image1, image2, image3, image4];
 
-	const [product, setProduct] = useState([{ image: images[0] }, { image: images[1] }, { image: images[2] }, { image: images[3] }]);
-	
+	const [product, setProduct] = useState([
+		{ image: images[0], id: 1 },
+		{ image: images[1], id: 2 },
+		{ image: images[2], id: 3 },
+		{ image: images[3], id: 4 },
+	]);
+
 	const getProduct = () => {
 		setProduct(product);
 		// 	fetch(`api/products`)
