@@ -14,10 +14,10 @@ const ProductPage = props => {
   const images = [image1, image2, image3, image4];
 
   const [product, setProduct] = useState([
-    { image: images[0] },
-    { image: images[1] },
-    { image: images[2] },
-    { image: images[3] },
+    { image: images[0], id: 1, drop_time: 10000 },
+    { image: images[1], id: 2, drop_time: 10000 },
+    { image: images[2], id: 3, drop_time: 10000 },
+    { image: images[3], id: 4, drop_time: 10000 },
   ]);
 
   const getProduct = () => {
