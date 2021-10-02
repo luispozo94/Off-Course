@@ -1,14 +1,24 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import '../../styles/RegisterForm.css';
-
+import { withRouter, Link } from 'react-router-dom';
 // import useFetch from '../../Hooks/useFetch.js';
 
-export default function RegisterForm() {
+function RegisterForm({ history }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [hidden, isHidden] = useState(false);
 
+  const inputRef = useRef();
+
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
+
+  //declared a handler function that will be called when the LOGIN button is clicked
+  const handleAdmin = () => {
+    history.push('/admin');
+  };
   function handleEmailInput(e) {
     setEmail(e.target.value);
   }
@@ -59,6 +69,7 @@ export default function RegisterForm() {
             <div className="email_field">
               <input
                 id="input-email"
+                ref={inputRef}
                 type="text"
                 required
                 placeholder="Email"
@@ -83,7 +94,12 @@ export default function RegisterForm() {
               <span></span>
             </div>
             <div className="login_button">
-              <input type="Submit" value="Log In" disabled={isLoading} />
+              <input
+                onClick={handleAdmin}
+                type="Submit"
+                value="Log In"
+                disabled={isLoading}
+              />
             </div>
             <div className="register_link">
               Not a member? <a onClick={toggleLogIn}>Sign Up</a>
@@ -128,7 +144,7 @@ export default function RegisterForm() {
               />
             </div>
             <div className="register_link">
-              Already have an account? <a onClick={toggleLogIn}>Sign In</a>
+              Already have an account? <Link to="/SignIn">Sign In</Link>
             </div>
           </form>
         </div>
@@ -136,3 +152,5 @@ export default function RegisterForm() {
     </>
   );
 }
+
+export default withRouter(RegisterForm);

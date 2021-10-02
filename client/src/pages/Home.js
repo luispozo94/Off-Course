@@ -3,9 +3,11 @@ import '../styles/style.css';
 import sliderImg from '../assets/images/homepage.jpeg';
 import sliderImg2 from '../assets/images/homepage2.jpeg';
 import sliderImg3 from '../assets/images/homepage3.jpeg';
+import arrow from '../assets/images/arrow2.jpg';
 import { Link } from 'react-router-dom';
 
 const images = [sliderImg, sliderImg2, sliderImg3];
+const img2 = arrow;
 
 export default function Home() {
   // creating state variables
@@ -36,9 +38,11 @@ export default function Home() {
           <Link className="shopnow" to="/product">
             SHOP NOW
           </Link>
+          <img className="arrow" src={img2}></img>
         </div>
       </div>
       <div className="image_container">
+        <div id="scroll-text">ITS 1:30.. ALRIGHT TIME FOR BED</div>
         <img
           className="image_slider"
           src={images[currentImage]}
