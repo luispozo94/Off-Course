@@ -42,7 +42,9 @@ export default function Home() {
         </div>
       </div>
       <div className="image_container">
-        <div id="scroll-text">ITS 1:30.. ALRIGHT TIME FOR BED</div>
+        <div id="scroll-text">
+          NEW PRODUCT DROP TODAY >>>> NEW PRODUCT DROP TODAY >>>>
+        </div>
         <img
           className="image_slider"
           src={images[currentImage]}

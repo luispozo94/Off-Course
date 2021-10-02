@@ -86,6 +86,9 @@ export default function AddProductForm() {
             onChange={e => setImgUrl(e.target.value)}
           ></input>
         </div>
+        <div>
+          <button></button>
+        </div>
       </form>
     </>
   );

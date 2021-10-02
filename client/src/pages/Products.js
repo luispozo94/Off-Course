@@ -9,11 +9,11 @@ const Products = (props) => {
 				props.product.map((item) => (
 					<Link to={`/product/${item.imdbID}`} key={item.imdbID}>
 						<div className="box">
-							<img src="https://res.cloudinary.com/dtyuldw8b/image/upload/v1633127536/sample.jpg"></img>
+							<img src={item.image}></img>
 						</div>
 						<div className="product">
-							<p>Item Brand</p>
-							<p>Product name</p>
+							<p>Brand Name</p>
+							<p>Product Name</p>
 							<p>Price</p>
 						</div>
 					</Link>

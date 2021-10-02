@@ -3,24 +3,31 @@ import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import ProductDetail from './ProductDetail';
 import Products from './Products';
+import image1 from '../assets/NewImages/image5.png';
+import image2 from '../assets/NewImages/image6.png';
+import image3 from '../assets/NewImages/image7.png';
+import image4 from '../assets/NewImages/image8.png';
 
 //created a functional component that will iterate thru the response JSON
 const ProductPage = (props) => {
-	const [product, setProduct] = useState([]);
+	const images = [image1, image2, image3, image4];
 
-	// const getProduct = () => {
-	// 	fetch(`https://api.cloudinary.com/v1_1/dtyuldw8b`)
-	// 		.then((response) => response.json())
-	// 		.then((data) => {
-	// 			setProduct();
-	// 			console.log(data);
-	// 		})
-	// 		.catch((error) => console.error(error));
-	// };
+	const [product, setProduct] = useState([{ image: images[0] }, { image: images[1] }, { image: images[2] }, { image: images[3] }]);
+	
+	const getProduct = () => {
+		setProduct(product);
+		// 	fetch(`api/products`)
+		// 		.then((response) => response.json())
+		// 		.then((data) => {
+		// 			setProduct();
+		// 			console.log(data);
+		// 		})
+		// 		.catch((error) => console.error(error));
+	};
 
-	// useEffect(() => {
-	// 	getProduct();
-	// }, []);
+	useEffect(() => {
+		getProduct();
+	}, []);
 
 	return (
 		<Router>
