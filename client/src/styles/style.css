@@ -41,13 +41,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  /* border: 2px solid pink; */
-  /* padding: 3em; */
   width: 40%;
   margin-left: 10%;
-  /* margin-right: 10%; */
-  /* margin-top: 10%; causing both image containers to lower
-  /* margin-bottom: -5%; */
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -102,7 +97,6 @@ body {
   display: flex;
   width: 8%;
   object-fit: scale-down;
-  /* animation: pulse 1s infinite; */
 }
 
 .image_container {
@@ -125,6 +119,8 @@ img:hover {
 #scroll-text {
   /* animation properties */
   /* border: 3px solid black; */
+  font-style: italic;
+  font-size: 17px;
 
   -moz-transform: translateX(100%);
   -webkit-transform: translateX(100%);

@@ -6,11 +6,10 @@
 .container {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-between;
   gap: 90px 90px;
-  align-self: auto;
-  margin: 100px 300px;
+  margin: 10% 20%;
 }
 
 .product_details > p {
@@ -22,6 +21,17 @@
   margin-top: 10px;
   cursor: default;
   text-decoration: none;
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+img {
+  width: 35%;
 }
 
 /* .product_details > p {

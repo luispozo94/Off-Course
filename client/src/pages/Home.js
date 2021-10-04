@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/style.css';
-import sliderImg from '../assets/images/homepage.jpeg';
-import sliderImg2 from '../assets/images/homepage2.jpeg';
+import sliderImg2 from '../assets/images/homepage.jpeg';
+import sliderImg from '../assets/images/newhomepage.jpeg';
 import sliderImg3 from '../assets/images/homepage3.jpeg';
 import arrow from '../assets/images/arrow2.jpg';
 import { Link } from 'react-router-dom';
@@ -43,7 +43,8 @@ export default function Home() {
       </div>
       <div className="image_container">
         <div id="scroll-text">
-          NEW PRODUCT DROP TODAY >>>> NEW PRODUCT DROP TODAY >>>>
+          NEW PRODUCT DROP TODAY >>>> NEW PRODUCT DROP TODAY >>>> NEW PRODUCT
+          DROP TODAY >>>> NEW PRODUCT DROP TODAY >>>>
         </div>
         <img
           className="image_slider"
