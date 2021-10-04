@@ -31,7 +31,7 @@ const ProductPage = (props) => {
 	};
 
 	useEffect(() => {
-		getProduct();
+		getProduct();//run func
 	}, []);
 
 	return (

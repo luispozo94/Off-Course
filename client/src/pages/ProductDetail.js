@@ -4,9 +4,6 @@ import '../styles/ProductDetails.css';
 
 const ProductDetail = (props) => {
 	const match = useRouteMatch();
-	console.log(match);
-	console.log(match.params);
-	console.log(props);
 
 	return (
 		<>
