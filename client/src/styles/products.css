@@ -6,17 +6,19 @@
 .container {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: center;
+  /* align-items: center; */
   gap: 90px 90px;
   margin: 10% 20%;
 }
 
-.product_details > p {
+.product > p {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  align-items: center;
+  /* align-items: center; */
+  justify-content: center;
   gap: 9px;
   margin-top: 10px;
   cursor: default;
@@ -26,12 +28,13 @@
 .box {
   display: flex;
   flex-direction: row;
+  align-items: center;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
 img {
-  width: 35%;
+  width: 30%;
 }
 
 /* .product_details > p {

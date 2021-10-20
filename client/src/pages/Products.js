@@ -4,7 +4,7 @@ import '../styles/products.css';
 
 const Products = props => {
   return (
-    <div className="container ">
+    <div className="container">
       {props.product &&
         props.product.map(item => (
           <Link to={`/product/${item.id}`} key={item.id}>
