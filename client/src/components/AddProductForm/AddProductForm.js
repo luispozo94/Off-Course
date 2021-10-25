@@ -102,12 +102,3 @@ export default function AddProductForm() {
   );
 }
 
-/*
-    - brandName
-    - product name
-    - price
-    - drop_time
-    - imgURL
-    
-    
-*/

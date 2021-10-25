@@ -20,17 +20,7 @@ const ProductPage = props => {
     { image: images[3], id: 4, drop_time: 10000 },
   ]);
 
-  const getProduct = () => {
-    setProduct(product);
-    // 	fetch(`api/products`)
-    // 		.then((response) => response.json())
-    // 		.then((data) => {
-    // 			setProduct();
-    // 			console.log(data);
-    // 		})
-    // 		.catch((error) => console.error(error));
-  };
-
+  
   useEffect(() => {
     getProduct();
   }, []);
@@ -55,4 +45,4 @@ const ProductPage = props => {
 };
 
 export default ProductPage;
-// <Route exact path="/product/:id" render={() => <ProductDetail product={product} />} />;
+

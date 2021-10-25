@@ -23,4 +23,4 @@ const Products = props => {
 };
 
 export default Products;
-/*<img src={item.Poster} alt="product"></img> */
+

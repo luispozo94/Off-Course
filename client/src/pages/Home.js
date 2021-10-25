@@ -10,10 +10,7 @@ const images = [sliderImg, sliderImg2, sliderImg3];
 const img2 = arrow;
 
 export default function Home() {
-  // creating state variables
-  // currentImage stores current [index] of poistion in images arr
-  // setCurrentImage function to update currentImage
-  // useState argument is the initial value for currentImage -> [0]
+  
   const [currentImage, setCurrentImage] = useState(0);
 
   const handleClick = () => {
